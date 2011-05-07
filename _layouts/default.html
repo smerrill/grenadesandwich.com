@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  {% include head.html %}
+</head>
+<body>
+
+<div class="site">
+  <div class="title">
+    <a href="/">Grenade Sandwich</a>
+    <span class="subtitle" href="/">Explosive thoughts on code, music and life by Steven Merrill</span>
+  </div>
+
+  <div class="nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about-site.html">About the Site</a></li>
+      <div class="clear"></div>
+    </ul>
+  </div>
+
+  {{ content }}
+
+  {% include footer.html %}
+
+  <a href="http://github.com/smerrill"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
+</body>
+</html>
