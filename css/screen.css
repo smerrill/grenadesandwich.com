@@ -83,9 +83,6 @@
 /*}*/
 
 body {
-  background-image: url(../images/center.png);
-  background-repeat: repeat-y;
-  background-position: top center;
   font: 13.34px Helvetica, Arial, clean, sans-serif;
   *font-size: small;
   text-align: center;
@@ -212,8 +209,13 @@ ul.posts span {
   font-size: 110%;
   text-align: left;
   width: 700px;
+  padding: 0 50px;
   margin: 0 auto;
   line-height: 1.5em;
+  box-shadow: 10px 0 10px rgba(0,0,0,.5), -10px 0 10px rgba(0,0,0,.5), 0 10px 10px rgba(0,0,0,.5);
+  -moz-box-shadow: 10px 0 10px rgba(0,0,0,.5), -10px 0 10px rgba(0,0,0,.5), 0 10px 10px rgba(0,0,0,.5);
+  -webkit-box-shadow: 10px 0 10px rgba(0,0,0,.5), -10px 0 10px rgba(0,0,0,.5), 0 10px 10px rgba(0,0,0,.5);
+  background-color: white;
 }
 
 .title {
