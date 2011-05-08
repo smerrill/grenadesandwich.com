@@ -11,8 +11,6 @@ created: 1259294938
 
 [flickr-photo:id=4136785689]
 
-<br />
-
 <h2>Why I Like Scala</h2>
 
 <h3>It's got an interactive shell</h3>
