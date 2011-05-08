@@ -25,9 +25,24 @@ body {
 }
 
 html {
-  background-image: url(../images/bg.png);
-  background-repeat: repeat;
   background-position: top center;
+  background-color: #6d695c;
+  background-image:
+    repeating-linear-gradient(-30deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    repeating-linear-gradient(30deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    linear-gradient(30deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+    linear-gradient(-30deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+  background-image:
+    -moz-repeating-linear-gradient(-30deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    -moz-repeating-linear-gradient(30deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    -moz-linear-gradient(30deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+    -moz-linear-gradient(-30deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+  background-image:
+    -webkit-repeating-linear-gradient(-30deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    -webkit-repeating-linear-gradient(30deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+    -webkit-linear-gradient(30deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+    -webkit-linear-gradient(-30deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+  background-size: 70px 120px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -271,8 +286,8 @@ h1.page-title {
 #post pre {
   border: 1px solid #ddd;
   background-color: #eef;
-  padding: 0 .4em;
-  width: 700px;
+  padding: .5em .5em 1em;
+  line-height: 0.5em;
 }
 
 #post ul,
@@ -283,8 +298,9 @@ h1.page-title {
 #post code {
   border: 1px solid #ddd;
   background-color: #eef;
-  font-size: 85%;
+  font-size: 0.6em;
   padding: 0 .2em;
+  overflow: scroll;
 }
 
 #post pre code {
