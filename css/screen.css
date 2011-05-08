@@ -11,42 +11,66 @@
   padding: 0;
 }
 
-html, body {
-  height: 100%;
-}
+/*html, body {*/
+  /*height: 100%;*/
+/*}*/
 
 body {
-  background-color: white;
-  font: 13.34px helvetica, arial, clean, sans-serif;
+  background-image: url(../images/center.png);
+  background-repeat: repeat-y;
+  background-position: top center;
+  font: 13.34px Helvetica, Arial, clean, sans-serif;
   *font-size: small;
   text-align: center;
 }
 
+html {
+  background-image: url(../images/bg.png);
+  background-repeat: repeat;
+  background-position: top center;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  margin: 0;
+  font-family: 'LeagueGothicRegular', Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 h1 {
-  font: 40px/48px 'LeagueGothicRegular', Arial, sans-serif;
+  font: 2.5em 'LeagueGothicRegular', Arial, sans-serif;
   /*text-transform: uppercase;*/
   letter-spacing: 0;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.25em;
+}
+
+h3 {
+  font-size: 1.75em;
+  line-height: 1em;
+  color: #666;
 }
 
 p {
   margin: 1em 0;
 }
 
-a {
-  color: #00a;
+a:link {
+  color: #a00;
+}
+
+a:visited {
+  color: #600;
 }
 
 a:hover {
   color: black;
 }
 
-a:visited {
-  color: #a0a;
+a:active {
+  color: #a00;
 }
 
 table {
@@ -91,9 +115,9 @@ ul.posts li {
 }
 
 ul.posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
+  color: #666;
+  font-family: Menlo, "Andale Mono", Monaco, "Courier New", monospace;
+  /*font-size: 80%;*/
 }
 
 /*****************************************************************************/
@@ -104,24 +128,32 @@ ul.posts span {
 
 .site {
   font-size: 110%;
-  text-align: justify;
-  width: 40em;
-  margin: 3em auto 2em auto;
+  text-align: left;
+  width: 700px;
+  margin: 0 auto;
   line-height: 1.5em;
 }
 
 .title {
   /*font-weight: bold;*/
-  /*margin-bottom: 2em;*/
   color: #333;
+  text-transform: uppercase;
+  width: 600px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3em 0 2em;
+}
+
+.title a, .title span {
+}
+
+h1.page-title {
+  margin: 0.5em 0;
   text-transform: uppercase;
 }
 
-h1.title {
-  margin: 0.5em 0;
-}
-
-.site .title a {
+.site .title a.main-title {
   color: #a00;
   font: 96px/100px 'LeagueGothicRegular', Arial, sans-serif;
   -webkit-text-shadow: 3px 3px 0px rgba(50, 50, 50, 0.25);
@@ -175,16 +207,29 @@ h1.title {
   color: #666;
   border-top: 4px solid #eee;
   margin-top: 2em;
+  padding-bottom: 2em;
   overflow: hidden;
+}
+
+.site .footer .bio {
+  float: left;
+  width: 200px;
+  margin-right: 10px;
 }
 
 .site .footer .contact {
   float: left;
-  margin-right: 3em;
+  width: 150px;
+  margin-right: 10px;
+}
+
+.site .footer .acknowledgements {
+  float: left;
+  width: 320px;
 }
 
 .site .footer .contact a {
-  color: #8085C1;
+  /*color: #8085C1;*/
 }
 
 .site .footer .rss {
@@ -199,54 +244,69 @@ h1.title {
 
 /*****************************************************************************/
 /*
+/* Main content
+/*
+/*****************************************************************************/
+
+#content {
+  font-size: 1.25em;
+  line-height: 1.75em;
+}
+
+/*****************************************************************************/
+/*
 /* Posts
 /*
 /*****************************************************************************/
 
 #post {
-
+  margin: 0.5em 0;
+  -webkit-text-shadow: 1px 1px 0px rgba(50, 50, 50, 0.1);
+  -moz-text-shadow:    1px 1px 0px rgba(50, 50, 50, 0.1);
+  text-shadow:         1px 1px 0px rgba(50, 50, 50, 0.1);
 }
 
-  /* standard */
+/* standard */
 
-  #post pre {
-    border: 1px solid #ddd;
-    background-color: #eef;
-    padding: 0 .4em;
-  }
+#post pre {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  padding: 0 .4em;
+  width: 700px;
+}
 
-  #post ul,
-  #post ol {
-    margin-left: 1.35em;
-  }
+#post ul,
+#post ol {
+  margin-left: 1.35em;
+}
 
-  #post code {
-    border: 1px solid #ddd;
-    background-color: #eef;
-    font-size: 85%;
-    padding: 0 .2em;
-  }
+#post code {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  font-size: 85%;
+  padding: 0 .2em;
+}
 
-    #post pre code {
-      border: none;
-    }
+#post pre code {
+  border: none;
+}
 
-  /* terminal */
+/* terminal */
 
-  #post pre.terminal {
-    border: 1px solid black;
-    background-color: #333;
-    color: white;
-  }
+#post pre.terminal {
+  border: 1px solid black;
+  background-color: #333;
+  color: white;
+}
 
-  #post pre.terminal code {
-    background-color: #333;
-  }
+#post pre.terminal code {
+  background-color: #333;
+}
 
 #related {
   margin-top: 2em;
 }
 
-  #related h2 {
-    margin-bottom: 1em;
-  }
+#related h2 {
+  margin-bottom: 1em;
+}

@@ -7,8 +7,8 @@
 
 <div class="site">
   <div class="title">
-    <a href="/">Grenade Sandwich</a>
-    <span class="subtitle" href="/">Explosive thoughts on code, music and life by Steven Merrill</span>
+    <a class="main-title" href="/">Grenade Sandwich</a>
+    <span class="subtitle">Explosive thoughts on code, music and life by <a href="about-site.html">Steven Merrill</a></span>
   </div>
 
   <div class="nav">
@@ -19,10 +19,10 @@
     </ul>
   </div>
 
-  {{ content }}
+  <div id="content">
+    {{ content }}
+  </div>
 
   {% include footer.html %}
-
-  <a href="http://github.com/smerrill"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" /></a>
 </body>
 </html>
