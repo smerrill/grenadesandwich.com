@@ -25,7 +25,7 @@ created: 1259294938
 
 <p>With its support for pattern-matching, structural types, and just through the general design of the language, you'll find that almost none of your Scala code is boilerplate. Consider the following Java:</p>
 
-{ syntaxhighlighter brush:scala }
+{% highlight scala %}
 public class Person {
   public final String name;
   public final int age;
@@ -34,13 +34,13 @@ public class Person {
     this.age = age;
   }
 }
-{/ syntaxhighlighter }
+{% endhighlight %}
 
 <p>Next, the equivalent Scala.</p>
 
-{ syntaxhighlighter brush:scala }
+{% highlight scala %}
 class Person(val name: String, val age: Int)
-{/ syntaxhighlighter }
+{% endhighlight %}
 
 <p>This was taken from a presentation by David Pollak, the creator of Lift. (You can check out <a href="http://www.infoq.com/presentations/Scala-Basics-Bytecode-David-Pollak">the whole presentation</a> along with more comparisons, along with some very low-level Java bytecode.)</p>
 
