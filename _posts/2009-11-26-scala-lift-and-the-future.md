@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Scala, Lift, and the Future
 created: 1259294938
@@ -9,7 +9,7 @@ created: 1259294938
 
 <p><a href="http://lerdorf.com/bio.php">Rasmus Lerdorf</a> is the inventor of PHP and author of a famous presentation at OSCMS 2007 that exposed flaws in PHP CMSs (although it showed Drupal to be light-years ahead of its open-source brethren in terms of security.)  He recently cast a critical eye on Foursquare:</p>
 
-[flickr-photo:id=4136785689]
+<p><a href="http://www.flickr.com/photos/00sven/4136785689" title="Twitter / Rasmus Lerdorf: Four stars to @foursquare ..." class="flickr-photo-img"><img src="http://farm3.static.flickr.com/2524/4136785689_fd8c6c0b69.jpg" alt="Twitter / Rasmus Lerdorf: Four stars to @foursquare ..." title="Twitter / Rasmus Lerdorf: Four stars to @foursquare ..."  class=" flickr-photo-img" height="346" width="500" /></a></p>
 
 <h2>Why I Like Scala</h2>
 

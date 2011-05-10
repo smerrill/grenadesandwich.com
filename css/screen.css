@@ -378,6 +378,11 @@ h1.page-title {
   /*overflow: scroll;*/
 }
 
+.flickr-photo-img {
+  display: block;
+  margin: 0 auto;
+}
+
 #post pre code {
   border: none;
 }

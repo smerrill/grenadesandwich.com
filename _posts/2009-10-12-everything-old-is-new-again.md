@@ -1,4 +1,4 @@
---- 
+---
 layout: post
 title: Everything Old is New Again
 created: 1255353828
@@ -27,6 +27,6 @@ created: 1255353828
 
 <p>Version 1.3 is the latest bzr version in any mainstream CentOS repo, so I built bzr 2.0 on my box.  I also got <a href="https://launchpad.net/loggerhead">Loggerhead</a> up and running for nice-looking graphical representations of my bzr branches like the one below.</p>
 
-[flickr-photo:id=4004158545]
+<p><a href="http://www.flickr.com/photos/00sven/4004158545" title="/lift-url-shortener : revision 7" class="flickr-photo-img"><img src="http://farm3.static.flickr.com/2642/4004158545_8dfb8177a7.jpg" alt="/lift-url-shortener : revision 7" title="/lift-url-shortener : revision 7"  class=" flickr-photo-img" height="411" width="500" /></a></p>
 
 <p>Check back later in the week where I'll post more details about how to set up <strong>bzr serve</strong> as a CentOS service, and how to get Loggerhead via an nginx proxy to play nicely together.</p>
