@@ -213,7 +213,7 @@ ul.posts span {
 .site {
   font-size: 110%;
   text-align: left;
-  width: 700px;
+  width: 860px;
   padding: 0 50px;
   margin: 0 auto;
   line-height: 1.5em;
@@ -358,10 +358,11 @@ h1.page-title {
 /* standard */
 
 #post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: .5em .5em 1em;
-  line-height: 0.65em;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  /*background-color: #eef;*/
+  padding: .5em 0 .5em;
+  line-height: 0.75em;
 }
 
 #post ul,
@@ -371,10 +372,10 @@ h1.page-title {
 
 #post code {
   border: 1px solid #ddd;
-  background-color: #eef;
-  font-size: 0.6em;
-  padding: 0 .2em;
-  overflow: scroll;
+  /*background-color: #eef;*/
+  font-size: 0.7em;
+  /*width: 2000px;*/
+  /*overflow: scroll;*/
 }
 
 #post pre code {
