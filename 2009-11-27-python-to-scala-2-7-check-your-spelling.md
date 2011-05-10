@@ -3,8 +3,6 @@ layout: post
 title: "Python to Scala 2.7: Check Your Spelling"
 created: 1259370442
 ---
-<p><strong>UPDATE:</strong> In the transition to my new blog, I had to add some linebreaks to get the Scala code to wrap properly. You can still <a href="https://github.com/smerrill/scala-norvig-spell-check">check out the code on GitHub</a> to get an idea of how I originally split out the linebreaks.</p>
-
 <p><a href="/node/10">Last time out</a>, I talked about the benefits of <a href="http://www.scala-lang.org/">Scala</a>, and why I'm looking at Scala and <a href="http://www.liftweb.net/">Lift</a>.</p>
 
 <p>In that spirit, I spent some time last weekend converting Peter Norvig's <a href="http://norvig.com/spell-correct.html">simple Python spell-checker</a> to Scala.  I didn't do this conversion alone; I got some great answers from <a href="http://dcsobral.blogspot.com/">Daniel Sobral</a>, <a href="http://www.codecommit.com/blog/">Daniel Spiewak</a> and finally <A href="http://dwins.wordpress.com/">David Winslow</a> on <a href="http://stackoverflow.com/questions/1780459/how-can-i-approximate-pythons-or-operator-for-set-comparison-in-scala">Stack Overflow</a>. David provided the answer I needed for the best way to implement the matching function in Scala 2.7.</p>
@@ -14,7 +12,7 @@ created: 1259370442
 {% highlight python %}
 import re, collections
 
-def words(text): return re.findall('[a-z]+', text.lower()) 
+def words(text): return re.findall('[a-z]+', text.lower())
 
 def train(features):
     model = collections.defaultdict(lambda: 1)
@@ -61,15 +59,11 @@ val NWORDS = train(Source.fromFile("big.txt").getLines.mkString.toLowerCase)
 def known(words:Set[String]) = {Set.empty ++ (for(w <- words if NWORDS contains w) yield w)}
 
 def edits1(word:String) = {
-  Set.empty ++
+  Set.empty ++ // The next four are deletes, transposes, replaces and inserts, respectively.
   (for (i <- 0 until word.length) yield (word take i) + (word drop (i + 1))) ++
-    // Deletes
-  (for (i <- 0 until word.length - 1) yield (word take i) + word(i + 1) + word(i) +
-    (word drop (i + 2))) ++ // Transposes
-  (for (i <- 0 until word.length; j <- alphabet) yield (word take i) + j +
-    (word drop (i+1))) ++ // Replaces
-  (for (i <- 0 until word.length; j <- alphabet) yield (word take i) + j +
-    (word drop i)) // Inserts
+  (for (i <- 0 until word.length - 1) yield (word take i) + word(i + 1) + word(i) + (word drop (i + 2))) ++
+  (for (i <- 0 until word.length; j <- alphabet) yield (word take i) + j + (word drop (i+1))) ++
+  (for (i <- 0 until word.length; j <- alphabet) yield (word take i) + j + (word drop i))
 }
 
 def known_edits2(word:String) = {Set.empty ++ (for
@@ -81,8 +75,7 @@ def correct(word: String) = {
   ).elements.map(_(word))
 
   sets find { !_.isEmpty } match {
-    case Some(candidates) => candidates.reduceLeft { (res, n) =>
-      if (NWORDS(res) > NWORDS(n)) res else n }
+    case Some(candidates) => candidates.reduceLeft { (res, n) => if (NWORDS(res) > NWORDS(n)) res else n }
     case None => word
   }
 }
