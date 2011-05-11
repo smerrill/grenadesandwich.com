@@ -2,6 +2,10 @@
 layout: post
 title: Need for Speed
 created: 1246133492
+categories:
+- Performance
+- Drupal
+- Web Development
 ---
 <p>I've been doing some pretty exciting things recently with website performance. I always disliked doing IT work in the past, but the challenge of setting a server up to be able to withstand crushing traffic is now quite intriguing to me.</p>
 

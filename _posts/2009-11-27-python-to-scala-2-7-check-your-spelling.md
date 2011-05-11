@@ -2,6 +2,9 @@
 layout: post
 title: "Python to Scala 2.7: Check Your Spelling"
 created: 1259370442
+categories:
+- Python
+- Scala
 ---
 <p><a href="/node/10">Last time out</a>, I talked about the benefits of <a href="http://www.scala-lang.org/">Scala</a>, and why I'm looking at Scala and <a href="http://www.liftweb.net/">Lift</a>.</p>
 

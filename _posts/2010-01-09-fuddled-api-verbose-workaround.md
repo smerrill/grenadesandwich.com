@@ -2,6 +2,11 @@
 layout: post
 title: Fuddled API, Verbose Workaround
 created: 1263013345
+categories:
+- Unfuddle
+- Treehouse Agency
+- Scala
+- Databinder Dispatch
 ---
 <p>I've started writing some <a href="http://scala-lang.org/">Scala</a> applications (including one atop the <a href="http://liftweb.net/">Lift web framework</a>) to access <a href="http://unfuddle.com/docs/api/">Unfuddle's API</a> recently. I've mainly been building daily burndown reports for my team at <a href="http://treehouseagency.com/">Treehouse Agency</a>.  I've run into a few issues with API methods not working as advertised, and Unfuddle's been pretty good about fixing most of them.</p>
 

@@ -2,6 +2,13 @@
 layout: post
 title: Everything Old is New Again
 created: 1255353828
+categories:
+- Performance
+- Nginx
+- Drupal
+- CentOS
+- CDN
+- Bazaar
 ---
 <p>It's time for my quarterly blogging drive, and to start, here's some information on my ever-increasing need to try out cool web technologies.</p>
 

@@ -2,6 +2,10 @@
 layout: post
 title: Scala, Lift, and the Future
 created: 1259294938
+categories:
+- Scala
+- Lift
+- Functional Programming
 ---
 <p>I've been spending a decent amount of my after-hours time investigating a combination that I think will be part of the future of web programming: the <a href="http://www.scala-lang.org">Scala programming language</a>, and <a href="http://www.liftweb.net/">the Lift web framework</a> on top of it.</p>
 

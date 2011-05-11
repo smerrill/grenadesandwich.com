@@ -2,6 +2,8 @@
 layout: post
 title: "Why I Hate Drupal: Friday the 13th Edition"
 created: 1236924634
+categories:
+- Drupal
 ---
 <p>Now that I'm back from my month-long blog hiatus and from <a href="http://dc2009.drupalcon.org">DrupalCon DC 2009</a>, I&nbsp;thought I'd throw up a little post in the same vein as <a href="http://walkah.net">walkah</a>'s brilliant <a href="http://walkah.net/blog/walkah/why-i-hate-drupal">Why I Hate Drupal</a> talk.</p>
 

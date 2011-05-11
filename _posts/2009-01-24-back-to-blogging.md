@@ -2,6 +2,11 @@
 layout: post
 title: Back to Blogging
 created: 1232807141
+categories:
+- Treehouse Agency
+- Templatica
+- Drupal
+- Announcements
 ---
 <p>Welcome to the new (and completely empty) Grenade Sandwich. My name is Steven Merrill, a classical singer and technologist, and I'll be your host.</p>
 
