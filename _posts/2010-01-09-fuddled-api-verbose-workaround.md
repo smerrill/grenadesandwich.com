@@ -15,9 +15,9 @@ categories:
 <p>The code to prepare a request that will send Basic credentials when the server requests them is concise:</p>
 
 {% highlight scala %}
-  import dispatch._
+import dispatch._
 
-  val req = :/("%s.unfuddle.com" format subdomain) / "api/v1" as (user, password)
+val req = :/("%s.unfuddle.com" format subdomain) / "api/v1" as (user, password)
 {% endhighlight %}
 
 <p>Clean and simple, right?</p>
@@ -27,11 +27,11 @@ categories:
 <p>Here's the full workaround I came up with.</p>
 
 {% highlight scala %}
-  import dispatch._
-  import org.apache.commons.codec.binary.Base64
+import dispatch._
+import org.apache.commons.codec.binary.Base64
 
-  val authString = "Basic " + new String(Base64.encodeBase64("%s:%s".format(user, password).getBytes))
-  val req = :/("%s.unfuddle.com" format subdomain) / "api/v1" <:< Map("Authorization" -> authString)
+val authString = "Basic " + new String(Base64.encodeBase64("%s:%s".format(user, password).getBytes))
+val req = :/("%s.unfuddle.com" format subdomain) / "api/v1" <:< Map("Authorization" -> authString)
 {% endhighlight %}
 
 <p>So there you have it - a method to construct a Databinder Dispatch web request that always sends an HTTP basic auth header. Hopefully, all the web APIs that you interact with will do the right thing regarding WWW-Authenticate headers, but if not, now you'll know how to cope.</p>
