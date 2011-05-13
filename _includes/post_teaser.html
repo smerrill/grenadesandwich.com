@@ -1,0 +1,21 @@
+<li class="post">
+  <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  {% if post.categories %}
+  <div class="meta">
+    Posted on {{ post.date | date_to_string }}.
+    {% include post_categories.html %}
+  </div>
+  {% endif %}
+  {% if post.preview %}
+  <div class="preview">
+    {{ post.preview }}
+    <p> &raquo; <a class="read-more" href="{{ post.url }}">Continue reading</a> this article.</p>
+  </div>
+  {% else %}
+  <div class="preview">
+    <p>Sorry, it looks as though <em>{{ post.title }}</em> was too pithy for a preview.</p>
+    <p>Won't you please <a href="{{ post.url }}">read the whole thing</a>?</p>
+  </div>
+  {% endif %}
+</li>
+

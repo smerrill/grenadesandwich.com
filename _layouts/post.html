@@ -3,6 +3,10 @@ layout: default
 ---
 <div id="post">
   <h1 class="page-title">{{ page.title }}</h1>
+  <div class="meta">
+    Posted on {{ page.date | date_to_string }}.
+    {% include post_categories.html %}
+  </div>
   {{ content }}
 </div>
 

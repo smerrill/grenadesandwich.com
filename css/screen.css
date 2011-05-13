@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-h1 {
+h1, h2.post-title {
   font: 2.5em 'LeagueGothicRegular', Arial, sans-serif;
   /*text-transform: uppercase;*/
   letter-spacing: 0;
@@ -194,14 +194,39 @@ ul.posts {
   margin-bottom: 2em;
 }
 
-ul.posts li {
-    line-height: 1.75em;
+ul.posts li.post {
+  padding-top: 1em;
+  line-height: 1.75em;
+  border-top: 2px solid #eee;
 }
 
 ul.posts span {
   color: #666;
   font-family: Menlo, "Andale Mono", Monaco, "Courier New", monospace;
   /*font-size: 80%;*/
+}
+
+/* @TODO: Fix. */
+#post .meta {
+  position: relative;
+  bottom: 1.25em;
+  margin-bottom: 0;
+}
+
+#post .meta, ul.posts .meta {
+  font-size: .85em;
+  color: #333;
+}
+
+#post .meta ul, #post .meta ul li,
+ul.posts .meta ul, ul.posts .meta ul li {
+  list-style-type: none;
+  display: inline;
+  margin-left: 0;
+}
+
+ul.posts .meta ul li {
+  display: inline;
 }
 
 /*****************************************************************************/
@@ -240,6 +265,10 @@ ul.posts span {
 h1.page-title {
   margin: 0.5em 0;
   text-transform: uppercase;
+}
+
+#post h1.page-title {
+  margin 0.5em 0 0;
 }
 
 .site .title a.main-title {
@@ -292,7 +321,6 @@ h1.page-title {
 }
 
 .site .footer {
-  font-size: 80%;
   color: #666;
   border-top: 4px solid #eee;
   margin-top: 2em;
@@ -302,19 +330,19 @@ h1.page-title {
 
 .site .footer .bio {
   float: left;
-  width: 200px;
+  width: 260px;
   margin-right: 10px;
 }
 
 .site .footer .contact {
   float: left;
-  width: 150px;
+  width: 200px;
   margin-right: 10px;
 }
 
 .site .footer .acknowledgements {
   float: left;
-  width: 320px;
+  width: 360px;
 }
 
 .site .footer .contact a {
@@ -357,6 +385,10 @@ h1.page-title {
 
 /* standard */
 
+#post p {
+  margin: 0 0 1em;
+}
+
 #post pre {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
@@ -385,6 +417,10 @@ h1.page-title {
 
 #post pre code {
   border: none;
+}
+
+h2.post-title a {
+  text-decoration: none;
 }
 
 /* terminal */
