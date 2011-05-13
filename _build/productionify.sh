@@ -6,6 +6,9 @@ echo 'Generating site.'
   exit 1
 }
 
+echo 'Compressing HTML.'
+gfind _site -type f -name *.html -exec htmlcompressor {} -o {} \;
+
 echo 'Minifying CSS and JS.'
 gfind _site -type f -name *.css -print0 | xargs -0 yuicompressor -o '.css$:.css'
 gfind _site -type f -name *.js -print0 | xargs -0 yuicompressor -o '.js$:.js'
