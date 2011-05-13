@@ -18,7 +18,7 @@ for file_extension in $gzip_types; do
 done
 
 echo 'Deploying site.'
-rsync -avq _site/ workhorse:/var/www/vhosts/grenadesandwich.com || {
+rsync -avq --delete-after _site/ workhorse:/var/www/vhosts/grenadesandwich.com || {
   echo 'ERROR: Could not deploy the site.'
   exit
 }
