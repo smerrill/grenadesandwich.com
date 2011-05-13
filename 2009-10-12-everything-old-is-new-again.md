@@ -3,15 +3,15 @@ layout: post
 title: Everything Old is New Again
 created: 1255353828
 categories:
-- Performance
-- Nginx
-- Drupal
-- CentOS
-- CDN
-- Bazaar
+- performance
+- nginx
+- drupal
+- centos
+- cdn
+- bzr
 ---
 <p>It's time for my quarterly blogging drive, and to start, here's some information on my ever-increasing need to try out cool web technologies.</p>
-
+<!-- break -->
 <h3>Server Migration</h3>
 
 <p>My previous server was a VPS with 1 GB RAM for an obscenely low price from Serve By Design. I'm not linking to them, because I wouldn't recommend them, as you'll see.  For the money, I didn't expect them to stay around forever, and I was right. At the end of September, I got an email saying that they had to immediately cease all hosting and that I had 10 days to move my VPS.   Not great, but I can deal with that.</p>

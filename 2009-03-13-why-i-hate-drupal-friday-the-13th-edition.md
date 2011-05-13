@@ -3,10 +3,10 @@ layout: post
 title: "Why I Hate Drupal: Friday the 13th Edition"
 created: 1236924634
 categories:
-- Drupal
+- drupal
 ---
 <p>Now that I'm back from my month-long blog hiatus and from <a href="http://dc2009.drupalcon.org">DrupalCon DC 2009</a>, I&nbsp;thought I'd throw up a little post in the same vein as <a href="http://walkah.net">walkah</a>'s brilliant <a href="http://walkah.net/blog/walkah/why-i-hate-drupal">Why I Hate Drupal</a> talk.</p>
-
+<!-- break -->
 <p>A friend was building a Drupal site and asked me what I&nbsp;thought the best way to prepopulate a lot of HTML&nbsp;into a node body field was for a newsletter. Now, she's using <a href="http://drupal.org/project/simplenews">Simplenews</a> and <a href="http://drupal.org/project/simplenews_template">Simplenews template</a> isn't yet out for Drupal 6, but that's no problem. In the past, on sites like <a href="http://www.ypogp.org/">YPOGP.org</a>, I&nbsp;implemented the newsletter by using a little module called <a href="http://drupal.org/project/nodeformtemplate">nodeformtemplate</a> to fill in the node body with a full HTML&nbsp;newsletter, and letting the user type in the extra HTML&nbsp;they needed. That module makes it easy, right?</p>
 
 <p>It had been awhile since doing an implementation, so I&nbsp;told my friend to look into the 'node form template' module.&nbsp; Well, she dutifully went and downloaded the <a href="http://drupal.org/project/Node_form_template">Node Form Template</a> module, and not the <a href="http://drupal.org/project/nodeformtemplate">nodeformtemplate</a> module.&nbsp; (This makes sense, since she's building a Drupal 6 site, and Node Form Template has a 6 release.)</p>

@@ -3,12 +3,13 @@ layout: post
 title: Scala, Lift, and the Future
 created: 1259294938
 categories:
-- Scala
-- Lift
-- Functional Programming
+- scala
+- scala 2.7
+- lift
+- functional programming
 ---
 <p>I've been spending a decent amount of my after-hours time investigating a combination that I think will be part of the future of web programming: the <a href="http://www.scala-lang.org">Scala programming language</a>, and <a href="http://www.liftweb.net/">the Lift web framework</a> on top of it.</p>
-
+<!-- break -->
 <p>A number of high-scale, distributed systems have recently adopted Scala. Twitter's messaging queues are now handled by Scala and its Actors library. Another high-scale social game, <a href="http://foursquare.com/">Foursquare</a>, uses Scala for its backend, and Lift for its web tier.  (I'm excited to see a presentation about Foursquare's use of Lift at the <a href="http://www.meetup.com/New-York-Scala-Enthusiasts/calendar/11900384/">New York Scala Enthusiasts</a> meetup this weekend.</p>
 
 <p><a href="http://lerdorf.com/bio.php">Rasmus Lerdorf</a> is the inventor of PHP and author of a famous presentation at OSCMS 2007 that exposed flaws in PHP CMSs (although it showed Drupal to be light-years ahead of its open-source brethren in terms of security.)  He recently cast a critical eye on Foursquare:</p>
