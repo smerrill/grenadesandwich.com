@@ -3,13 +3,14 @@ layout: post
 title: "Python to Scala 2.7: Check Your Spelling"
 created: 1259370442
 categories:
-- Python
-- Scala
+- python
+- scala
+- scala 2.7
 ---
 <p><a href="/node/10">Last time out</a>, I talked about the benefits of <a href="http://www.scala-lang.org/">Scala</a>, and why I'm looking at Scala and <a href="http://www.liftweb.net/">Lift</a>.</p>
 
 <p>In that spirit, I spent some time last weekend converting Peter Norvig's <a href="http://norvig.com/spell-correct.html">simple Python spell-checker</a> to Scala.  I didn't do this conversion alone; I got some great answers from <a href="http://dcsobral.blogspot.com/">Daniel Sobral</a>, <a href="http://www.codecommit.com/blog/">Daniel Spiewak</a> and finally <A href="http://dwins.wordpress.com/">David Winslow</a> on <a href="http://stackoverflow.com/questions/1780459/how-can-i-approximate-pythons-or-operator-for-set-comparison-in-scala">Stack Overflow</a>. David provided the answer I needed for the best way to implement the matching function in Scala 2.7.</p>
-
+<!-- break -->
 <p>Here's Peter Norvig's 21 lines (not counting blank lines) of Python 2.5 code, for comparison.</p>
 
 {% highlight python %}

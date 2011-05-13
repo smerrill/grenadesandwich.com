@@ -3,15 +3,16 @@ layout: post
 title: Fuddled API, Verbose Workaround
 created: 1263013345
 categories:
-- Unfuddle
-- Treehouse Agency
-- Scala
-- Databinder Dispatch
+- unfuddle
+- treehouse agency
+- scala
+- scala 2.7
+- databinder dispatch
 ---
 <p>I've started writing some <a href="http://scala-lang.org/">Scala</a> applications (including one atop the <a href="http://liftweb.net/">Lift web framework</a>) to access <a href="http://unfuddle.com/docs/api/">Unfuddle's API</a> recently. I've mainly been building daily burndown reports for my team at <a href="http://treehouseagency.com/">Treehouse Agency</a>.  I've run into a few issues with API methods not working as advertised, and Unfuddle's been pretty good about fixing most of them.</p>
 
 <p>The problem <a href="http://unfuddle.com/community/forums/3/topics/816?page=1#posts-2306">I've been experiencing as of January 5th</a> is that Unfuddle has subtly broken authentication for client libraries that (wisely) wait for a 401 error with an accompanying WWW-Authenticate: Basic header before sending credentials.  (Namely, Unfuddle's API stopped sending a WWW-Authenticate header altogether.)  If need be, you can force most HTTP client libraries to send authentication on every request in one way or another, and that's what I had to do tonight with the excellent <a href="http://databinder.net/dispatch/About">Databinder Dispatch library</a>.</p>
-
+<!-- break -->
 <p>The code to prepare a request that will send Basic credentials when the server requests them is concise:</p>
 
 {% highlight scala %}
