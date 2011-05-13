@@ -1,0 +1,8 @@
+/*
+ * YUICompressor doesn't work with -o option unless there's more than
+ * one file.
+ */
+p { azimuth: 0; }
+/*
+ * Hence, this file.
+ */
