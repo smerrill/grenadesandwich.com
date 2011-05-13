@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# Check that certain binaries are available and in $PATH.
+
+binaries_required=(gfind jekyll yuicompressor htmlcompressor rsync)
+
+# Check that all the binaries we need are available and in $PATH. Use the `type` bash builtin rather than `which` for portability.
+for binary in ${binaries_required[@]}; do
+  type -P $binary > /dev/null || {
+    echo "ERROR: The site deploy job cannot find the ${binary} executable. Please put it into \$PATH before calling this job."
+    exit 1
+  }
+done
+
+# Get to work.
 echo 'Generating site.'
 (type -P ejekyll > /dev/null && ejekyll || jekyll) || {
   echo 'ERROR: Could not find (e)jekyll in $PATH.'
