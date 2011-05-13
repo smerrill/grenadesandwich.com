@@ -394,6 +394,7 @@ h1.page-title {
   border-bottom: 1px solid #ddd;
   /*background-color: #eef;*/
   padding: .5em 0 .5em;
+  margin-bottom: 1em;
   line-height: 0.75em;
 }
 
