@@ -376,9 +376,11 @@ h1.page-title {
 /* Posts
 /*
 /*****************************************************************************/
-
 #post {
   margin: 0.5em 0;
+}
+
+#post, .posts {
   -webkit-text-shadow: 1px 1px 0px rgba(50, 50, 50, 0.1);
   -moz-text-shadow:    1px 1px 0px rgba(50, 50, 50, 0.1);
   text-shadow:         1px 1px 0px rgba(50, 50, 50, 0.1);
