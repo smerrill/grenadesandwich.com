@@ -2,6 +2,7 @@
 layout: post
 title: Scala, Lift, and the Future
 created: 1259294938
+permalink: "/blog/steven/2009/11/27/scala-lift-and-future/"
 categories:
 - scala
 - scala 2.7

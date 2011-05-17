@@ -2,6 +2,7 @@
 layout: post
 title: Fuddled API, Verbose Workaround
 created: 1263013345
+permalink: "/blog/steven/2010/01/09/fuddled-api-verbose-workaround/"
 categories:
 - unfuddle
 - treehouse agency

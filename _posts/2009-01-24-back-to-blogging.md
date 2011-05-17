@@ -2,6 +2,7 @@
 layout: post
 title: Back to Blogging
 created: 1232807141
+permalink: "/blog/steven/2009/01/24/back-blogging/"
 categories:
 - treehouse agency
 - templatica

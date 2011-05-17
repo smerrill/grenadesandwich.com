@@ -2,6 +2,7 @@
 layout: post
 title: Tree House Flips Out
 created: 1232824576
+permalink: "/blog/steven/2009/01/24/tree-house-flips-out/"
 categories:
 - treehouse agency
 ---

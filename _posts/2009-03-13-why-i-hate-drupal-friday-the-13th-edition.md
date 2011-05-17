@@ -2,6 +2,7 @@
 layout: post
 title: "Why I Hate Drupal: Friday the 13th Edition"
 created: 1236924634
+permalink: "/blog/steven/2009/03/13/why-i-hate-drupal-friday-13th-edition/"
 categories:
 - drupal
 ---
