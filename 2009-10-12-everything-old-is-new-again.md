@@ -2,6 +2,7 @@
 layout: post
 title: Everything Old is New Again
 created: 1255353828
+permalink: "/blog/steven/2009/10/12/everything-old-new-again/"
 categories:
 - performance
 - nginx

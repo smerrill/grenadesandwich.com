@@ -2,6 +2,7 @@
 layout: post
 title: "Python to Scala 2.7: Check Your Spelling"
 created: 1259370442
+permalink: "/blog/steven/2009/11/28/python-scala-27-check-your-spelling/"
 categories:
 - python
 - scala

@@ -2,6 +2,7 @@
 layout: post
 title: An MTA Train at 96th
 created: 1233424924
+permalink: "/blog/steven/2009/01/31/mta-train-96th/"
 categories:
 - video
 - new york city

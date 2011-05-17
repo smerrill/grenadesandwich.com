@@ -2,6 +2,7 @@
 layout: post
 title: Need for Speed
 created: 1246133492
+permalink: "/blog/steven/2009/06/27/need-speed/"
 categories:
 - performance
 - drupal
