@@ -253,7 +253,7 @@ ul.posts .meta ul li {
   /*font-weight: bold;*/
   color: #333;
   text-transform: uppercase;
-  width: 600px;
+  width: 800px;
   display: block;
   text-align: center;
   margin: 0 auto;
@@ -274,7 +274,7 @@ h1.page-title {
 
 .site .title a.main-title {
   color: #a00;
-  font: 96px/100px 'LeagueGothicRegular', Arial, sans-serif;
+  font: 108px/120px 'LeagueGothicRegular', Arial, sans-serif;
   -webkit-text-shadow: 3px 3px 0px rgba(50, 50, 50, 0.25);
   -moz-text-shadow:    3px 3px 0px rgba(50, 50, 50, 0.25);
   text-shadow:         3px 3px 0px rgba(50, 50, 50, 0.25);
