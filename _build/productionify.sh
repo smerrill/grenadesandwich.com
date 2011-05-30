@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Set up options so that (e)jekyll does not publish future posts to the website.
+jekyll_opts='--no-future'
+
 # Check that certain binaries are available and in $PATH.
 
 binaries_required=(gfind jekyll yuicompressor htmlcompressor rsync)
@@ -14,7 +17,7 @@ done
 
 # Get to work.
 echo 'Generating site.'
-(type -P ejekyll > /dev/null && ejekyll || jekyll) || {
+(type -P ejekyll > /dev/null && ejekyll $jekyll_opts || jekyll $jekyll_opts) || {
   echo 'ERROR: Could not find (e)jekyll in $PATH.'
   exit 1
 }
