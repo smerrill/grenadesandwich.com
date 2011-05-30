@@ -29,7 +29,7 @@ Around 110th Street, the Greenway cleared out ahead of us. No pedestrians were i
 pulled up beside me. He caught my attention and in an accent that sounded vaguely Eastern European, he called to me, saying,
 **"You're amazing!"**
 
-He seemed quite impressed by my speed, or more likely my size despite my speed. In retrospect, my average speed
+He seemed quite impressed by my speed, or more likely my speed despite my size. In retrospect, my average speed
 down this particular section of the Greenway averaged out to almost 17 miles per hour, and that average includes the long,
 slow climb up three avenues once I reached 59th Street. I was going pretty fast when he was trailing me.
 
@@ -40,14 +40,18 @@ The gentleman in question was older - he looked like he could be in his mid-50s.
 and also unexpected. **"What do you eat?"** he shouted.
 
 I guess he wondered if there was some secret pre-workout routine I followed, or perhaps he was just inquiring as to whether
-I routinely ate my spinach. Nonetheless, the only answer I could muster was, **"far too much."**
+I routinely ate my spinach.
+
+Nonetheless, the only answer I could muster was, **"far too much."**
+
+_(My relationship with food is not terrifically healthy and will assuredly be the subject of a later essay.)_
 
 He offered a word of encouragement that I can't quite recall and then we switched places for about the next 40 blocks. He
 turned left before the fenced-off part of the path near the Trump Towers and I continued to shoot towards the egress at 59th
 Street.
 
 I ended up doing a complete circle around the park, biking west down 72nd Street into the sunset and heading back home through
-the beautiful split-lane path around 79th Street.
+the beautiful split-lane path around 79th Street that spills back into the Greenway once more.
 
 The whole experience exemplifies that which I love about NYC. It is cyclist-friendly, full of nature despite its gargantuan
 size, and populated with of a large variety of people of all races and cultures who might just surprise you with their
