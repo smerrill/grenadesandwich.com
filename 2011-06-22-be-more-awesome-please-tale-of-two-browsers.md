@@ -9,10 +9,9 @@ categories:
 ---
 When Firefox 4 came out, I switched to it. I was mainly impressed by its speed (relative to the stable version of Chrome at the time) and the efficacy of Firefox Sync.
 
-Several weeks later, I later abandoned it. There were several things that contributed to its downfall in my eyes. Chief among them was its effect on my battery life on my MacBook Pro. Despite being nearly as fast as Chrome in user-perceived speed, Firefox generally used more CPU. There was also a [very annoying bug](https://bugzilla.mozilla.org/show_bug.cgi?id=567552) that resulted in a ton of modal popups.
+Several weeks later, I abandoned it for the stable build of Chrome. There were several things that contributed to its downfall in my eyes. Chief among them was its effect on my battery life on my MacBook Pro. Despite being nearly as fast as Chrome in user-perceived speed, Firefox generally used more CPU. There was also a [very annoying bug](https://bugzilla.mozilla.org/show_bug.cgi?id=567552) that resulted in a ton of modal popups.
 
 About a month back, I switched from the Chrome stable released to the Chrome dev channel and I've been in general very pleased. There's one feature that has been slowly gnawing away at my sanity, however, and it's gotten serious enough that I'm switching back to Firefox 5 to see if my complaints about Firefox 4 have been addressed.
-
 <!-- break -->
 
 ## Advantage: Firefox
@@ -42,17 +41,17 @@ The straw that broke the camel's back with regard to Chrome is the fact that it 
 
 Most of these articles focus on the wrong part of the part of the AwesomeBar that, in my opinion, make it **truly awesome**, and that is the simple fact that it _remembers the URLs that I type on a daily basis_.
 
-I have been visiting sites that are not in Google's index quite a bit recently, as any web developer will do. And while it's kind of cute to continually type https://jenkins.{thing}.{stuff}.{domain}.{tld}/ the first time, it would be just dandy if Chrome would get the hint the second or fourth or twelfth time that I did so.
+I have been visiting sites that are not in Google's index quite a bit recently, as any web developer will do. And while it's kind of cute to type https://jenkins.{thing}.{stuff}.{domain}.{tld}/ two or three times, it would be just dandy if Chrome would get the hint the fourth or fifth or twelfth time that I did so.
 
 But it doesn't, and it seems that as of version 12 or so, no new URLs will ever enter into the Omnibar for me to search.
 
-Here is another example that shows just how frustrating this is. I've recently visited the source of the [Arch Linux PKGBUILD that I made for Varnish](https://github.com/smerrill/varnish-3-pkgbuild/blob/master/PKGBUILD) in both Firefox and Chrome. In Firefox, I can type "var pk" and the AwesomeBar brings up two hits that are laser-focused on what I'm looking for. Chrome suggests that I either do a Google search for that tiny, two-word phrase, or sheepishly suggests [this Coding Horror article from 2008](http://www.codinghorror.com/blog/2008/12/hardware-is-cheap-programmers-are-expensive.html) as the other relevant search using the Omnibar.
+Here is another example that shows just how frustrating this is. I've recently visited the source of the [Arch Linux PKGBUILD that I made for Varnish](https://github.com/smerrill/varnish-3-pkgbuild/blob/master/PKGBUILD) in both Firefox and Chrome. In Firefox, I can type "var pk" and the AwesomeBar brings up two hits that are laser-focused on what I'm looking for. Chrome suggests that I either do a Google search for that tiny, two-word phrase, or sheepishly suggests [this Coding Horror article from 2008](http://www.codinghorror.com/blog/2008/12/hardware-is-cheap-programmers-are-expensive.html) as the only relevant non-search item in the Omnibar.
 
 ## Chrome, Y U No Awesome?
 
-And believe me, I get it. Google wants me to make Google searches and to use Google instant and/or their prediction webservices so that they get a greater quantity of searches.  When I am genuinely looking for something with an unknown URL, I will happily do that. I love Google's products including their search.
+And believe me, I get it. Google wants me to make Google searches and to use Google Instant and/or their prediction webservices so that they get a greater quantity of searches.  When I am genuinely looking for something with an unknown URL, I will happily do that. I love Google's search.
 
 But please, Google, for the love of the sanity of web developers who routinely type long URLs that may not come up near the top of a Google search, make Chrome more [awesome](http://blog.mozilla.com/blog/2008/04/21/a-little-something-awesome-about-firefox-3/).
 
-Until then, I'll be trying out Firefox 5.
+Until then, I'll be trying out [Firefox 5](http://www.getfirefox.com).
 
