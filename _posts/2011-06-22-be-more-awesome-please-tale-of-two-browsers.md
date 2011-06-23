@@ -39,13 +39,13 @@ And finally, I have found ways to work around some of Firefox's flaws. Mostly no
 
 The straw that broke the camel's back with regard to Chrome is the fact that it no longer seems to save any new URLs, or at least it never puts them in the Omnibar. It seems that [I'm not alone in wanting this, either](http://superuser.com/questions/120885/make-chromes-omnibar-behave-more-like-the-firefox-awesomebar) - there are [several](http://jaygoldman.com/2010/12/how-to-get-the-firefox-awesomebar-in-google-chromes-omnibar/) [articles](http://www.chromeplugins.org/google/chrome-troubleshooting/how-can-i-make-omnibar-more-like-awesomebar-9539.html) [online](http://jshoer.wordpress.com/2008/10/12/make-google-chromes-omnibar-behave-more-like-firefox-3s-awesomebar/) about how to supposedly make Chrome's Omnibar more like the AwesomeBar in Firefox.
 
-Most of these articles focus on the wrong part of the part of the AwesomeBar that, in my opinion, make it **truly awesome**, and that is the simple fact that it _remembers the URLs that I type on a daily basis_.
+Most of these articles focus on the wrong part of the part of the AwesomeBar that, in my opinion, makes it **truly awesome**, and that is the simple fact that it _remembers the URLs that I type on a daily basis_.
 
 I have been visiting sites that are not in Google's index quite a bit recently, as any web developer will do. And while it's kind of cute to type https://jenkins.{thing}.{stuff}.{domain}.{tld}/ two or three times, it would be just dandy if Chrome would get the hint the fourth or fifth or twelfth time that I did so.
 
-But it doesn't, and it seems that as of version 12 or so, no new URLs will ever enter into the Omnibar for me to search.
+But it doesn't, and it seems that as of version 12 or so, no new URLs will ever enter into the Omnibar for autocompletion as I type.
 
-Here is another example that shows just how frustrating this is. I've recently visited the source of the [Arch Linux PKGBUILD that I made for Varnish](https://github.com/smerrill/varnish-3-pkgbuild/blob/master/PKGBUILD) in both Firefox and Chrome. In Firefox, I can type "var pk" and the AwesomeBar brings up two hits that are laser-focused on what I'm looking for. Chrome suggests that I either do a Google search for that tiny, two-word phrase, or sheepishly suggests [this Coding Horror article from 2008](http://www.codinghorror.com/blog/2008/12/hardware-is-cheap-programmers-are-expensive.html) as the only relevant non-search item in the Omnibar.
+Here is another example that shows just how frustrating this is. I've recently visited the source of the [Arch Linux PKGBUILD that I made for Varnish](https://github.com/smerrill/varnish-3-pkgbuild/blob/master/PKGBUILD) in both Firefox and Chrome. In Firefox, I can type "var pk" and the AwesomeBar brings up two hits that are laser-focused on what I'm looking for. Chrome suggests that I either do a Google search for that tiny, two-word phrase, and then sheepishly suggests [this Coding Horror article from 2008](http://www.codinghorror.com/blog/2008/12/hardware-is-cheap-programmers-are-expensive.html) as the only relevant non-search item in the Omnibar.
 
 ## Chrome, Y U No Awesome?
 
