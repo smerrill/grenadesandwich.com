@@ -11,6 +11,7 @@ categories:
 In truth, though, its extreme ease of configuration is another part of its appeal. Perhaps an application that you can't easily change is sending the wrong headers. In that case, just rewrite them on the way back out. Maybe you want to [munge Accept-Encoding headers](https://www.varnish-cache.org/trac/wiki/FAQ/Compression#Ithoughtyousaidthiswascomplicated) to get maximum cache hit rates? Varnish handles that with aplomb.
 
 My favorite Varnish story, though, deals with a quick hack I put together to fix what could potentially have been a major PR problem.
+
 <!-- break -->
 ## Shortening Links For Fun and Profit
 
@@ -20,7 +21,7 @@ Now let's travel back in time a bit.
 
 In the early spring of 2011, Team Treehouse Agency was preparing for [DrupalCon Chicago](http://chicago2011.drupal.org/). We had just printed up new business cards and promotional materials. We had put a number of URLs into our promotional materials and we were fleshing their content in the days leading up to the conference. One by one, we claimed the URLs on our tha.cm domain as we finished pages.
 
-## Oops
+## ...Oops
 
 We left the easiest page to produce (content-wise) for last: [tha.cm/social](http://tha.cm/social), which was simply a list of all the Treehouse Agency social media links. When we went to claim this link, however, we discovered one thing that we had overlooked.
 
@@ -34,7 +35,7 @@ We looked at other link-shortening services, but many of them cost too much or d
 
 The way that you implement bit.ly custom short domain support is by setting up a DNS <strong>A</strong> record that points to the URL 168.143.174.97. Therefore, I created a tiny [Rackspace Cloud Server](http://www.rackspace.com/cloud/cloud_hosting_products/servers/) and set the DNS for tha.cm to resolve to its IP. I then installed Varnish on it, and configured it almost as a straight-up proxy. Here's the VCL I used:
 
-{% highlight varnish %}
+{% highlight c %}
 backend default {
   .host = "168.143.174.97";
   .port = "80";
