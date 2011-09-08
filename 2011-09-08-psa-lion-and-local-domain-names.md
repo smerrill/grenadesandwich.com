@@ -6,7 +6,8 @@ categories:
 - lion
 - web development
 ---
-Do you enjoy your hair? Would you prefer not to pull it out while waiting for your local Apache server on Mac OS X to edliver a page to you?
+
+Do you enjoy your hair? Would you prefer not to pull it out while waiting for your local Apache server on Mac OS X to deliver a page to you?
 
 If you use Mac OS X Lion and have development sites set up at .local addresses, you should immediately move them to any other fake TLD. The .local address space is resolved for Bonjour and as a result any request to a .local name will not hit /etc/hosts first, but will search for Bonjour hosts first.
 
@@ -16,7 +17,7 @@ Instead, I switched all of my local dev sites from $DOMAIN.local to $DOMAIN.dev.
 
 <!-- break -->
 
-Since switching all my development sites to end in .dev, requests for them happen several orders of magnitudes faster, which is a welcome change. Here are two examples of an Apache 404 page (such that the DNS resolution time is the only appreciable time spent in delivering a response to **curl**.)
+Since switching all my development sites to end in .dev, requests for them happen several orders of magnitude faster, which is a welcome change. Here are two examples of an Apache 404 page (such that the DNS resolution time is the only appreciable time spent in delivering a response to **curl**.)
 
 {% highlight text %}
  ┌┤smerrill@Tinier-Shinier:6 [Sep 07 23:43:35] ~
