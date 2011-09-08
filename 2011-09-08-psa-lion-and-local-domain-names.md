@@ -16,11 +16,11 @@ Instead, I switched all of my local dev sites from $DOMAIN.local to $DOMAIN.dev.
 
 <!-- break -->
 
-Since switching all my development sites to end in .dev, requests for them happen several orders of magnitudes faster, which is a welcome change. Here are two examples of an Apache 404 page, so that the DNS resolution time is the only appreciable time spent in delivering a response to curl.
+Since switching all my development sites to end in .dev, requests for them happen several orders of magnitudes faster, which is a welcome change. Here are two examples of an Apache 404 page (such that the DNS resolution time is the only appreciable time spent in delivering a response to **curl**.)
 
 {% highlight text %}
  ┌┤smerrill@Tinier-Shinier:6 [Sep 07 23:43:35] ~
- └╼ time curl http://drupal7.local/ > /dev/null
+ └╼ time curl http://whatever.local/ > /dev/null
 
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
@@ -28,17 +28,19 @@ Since switching all my development sites to end in .dev, requests for them happe
 
 real	0m5.011s
 user	0m0.006s
-sys	0m0.003s
+sys 	0m0.003s
 
  ┌┤smerrill@Tinier-Shinier:6 [Sep 07 23:43:46] ~
- └╼ time curl -H 'Host: drupal7.local' http://127.0.0.1/ > /dev/null
+ └╼ time curl http://whatever.dev/ > /dev/null
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100    72  100    72    0     0   1412      0 --:--:-- --:--:-- --:--:--  1440
 
 real	0m0.060s
 user	0m0.007s
-sys	0m0.004s
+sys 	0m0.004s
 {% endhighlight %}
 
-It's amazing what a difference such a small change in DNS can make. I hope this speeds up your local development.
+That's right - the request goes from a lag of almost 5 seconds to finishing in the blink of an eye. A coworker reported his times going from 12 seconds to less than a tenth of a second. It's amazing what a difference such a small change in DNS can make.
+
+I hope this speeds up your local web development!
