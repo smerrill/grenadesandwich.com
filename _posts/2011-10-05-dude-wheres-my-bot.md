@@ -9,7 +9,9 @@ categories:
 
 Say what you will about node.js, but it is certainly an easy way to build IRC bots with the [Jerk library](https://github.com/gf3/Jerk).
 
-Our PHP-based bot knows to respond to "Sweet!" with "Dude!" and vice versa, so I decided to write a quick-and-dirty bot that would put our other bot into an infinite loop.
+The PHP-based bot that runs in the [Treehouse Agency](http://www.treehouseagency.com) IRC channels knows to respond to "Sweet!" with "Dude!" and vice versa. [Brian McMurray](http://www.brianmcmurray.com) said that he'd like to someday write a quick-and-dirty bot that would put our other bot into an infinite loop.
+
+I accepted that challenge, and 10 minutes later, the bot was done.
 
 The code is an example of how to build a bot that accepts environmental variables for configuration and otherwise does a pretty silly task.
 
