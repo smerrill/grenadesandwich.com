@@ -35,7 +35,7 @@ We looked at other link-shortening services, but many of them cost too much or d
 
 The way that you implement bit.ly custom short domain support is by setting up a DNS <strong>A</strong> record that points to the URL 168.143.174.97. Therefore, I created a tiny [Rackspace Cloud Server](http://www.rackspace.com/cloud/cloud_hosting_products/servers/) and set the DNS for tha.cm to resolve to its IP. I then installed Varnish on it, and configured it almost as a straight-up proxy. Here's the VCL I used:
 
-{% highlight c %}
+{% highlight scala %}
 backend default {
   .host = "168.143.174.97";
   .port = "80";
