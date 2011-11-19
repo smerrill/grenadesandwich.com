@@ -40,7 +40,7 @@ done
 echo 'Deploying site.'
 rsync -avq --delete-after _site/ workhorse:/var/www/vhosts/grenadesandwich.com || {
   echo 'ERROR: Could not deploy the site.'
-  exit
+  exit 1
 }
 
 echo 'Site deployed. Have a nice day.'
