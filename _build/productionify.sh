@@ -23,18 +23,18 @@ echo 'Generating site.'
 }
 
 echo 'Compressing HTML.'
-gfind _site -type f -name *.html -exec htmlcompressor {} -o {} \;
+gfind _site -type f -name '*.html' -exec htmlcompressor {} -o {} \;
 
 echo 'Minifying CSS and JS.'
-gfind _site -type f -name *.css -print0 | xargs -0 yuicompressor -o '.css$:.css'
-gfind _site -type f -name *.js -print0 | xargs -0 yuicompressor -o '.js$:.js'
+gfind _site -type f -name '*.css' -print0 | xargs -0 yuicompressor -o '.css$:.css'
+gfind _site -type f -name '*.js' -print0 | xargs -0 yuicompressor -o '.js$:.js'
 
 # Why not .woff? It's already compressed.
 gzip_types="css js html xml eot ttf svg"
 
 for file_extension in $gzip_types; do
   echo "Compressing all .${file_extension} files."
-  gfind _site -type f -name *.$file_extension -exec bash -c "gzip -9 -c '{}' > '{}.gz'" \;
+  gfind _site -type f -name '*.$file_extension' -exec bash -c "gzip -9 -c '{}' > '{}.gz'" \;
 done
 
 echo 'Deploying site.'
