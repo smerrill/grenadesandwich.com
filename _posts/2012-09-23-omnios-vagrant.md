@@ -66,7 +66,7 @@ Run a quick `vagrant help` to ensure that everything's hooked up properly.
 
     $ /opt/omni/lib/ruby/gems/1.9.1/gems/vagrant-1.0.5/bin/vagrant help
 
-Next up we need to install VirtualBox. I saw [errors related to the Crossbow-based networking kernel module](https://gist.github.com/7ddfa72c1d97198532ea) while trying to install a variety of versions of VirtualBox, so we can [force the older stream-based VirtualBox drive to install](http://www.virtualbox.org/manual/ch09.html#vboxbowsolaris11).
+Next up we need to install VirtualBox. I saw [errors related to the Crossbow-based networking kernel module](https://gist.github.com/7ddfa72c1d97198532ea) while trying to install a variety of versions of VirtualBox, so we can [force the older stream-based VirtualBox networking driver to install](http://www.virtualbox.org/manual/ch09.html#vboxbowsolaris11).
 
     $ touch /etc/vboxinst_vboxflt
 
