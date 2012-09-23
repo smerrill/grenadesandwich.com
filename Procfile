@@ -1,1 +1,1 @@
-web: bundle exec ejekyll --no-future --server $PORT
+web: bundle exec ejekyll --auto --future --server $PORT
