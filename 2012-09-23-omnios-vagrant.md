@@ -28,37 +28,62 @@ I am happy to report that I was able to get VirtualBox and Vagrant to the point 
 
 Here's the roundup on how to get it all up and running. All commands were run as root in the global zone.
 
-- Install a few utility packages. This is not strictly necessary, but it helps.
-  - `$ pkg install terminal/tmux`
-  - `$ pkg install developer/versioning/git`
-- Set up a static IP as pointed out in http://omnios.omniti.com/wiki.php/GeneralAdministration. In my case, it was 192.168.0.160.
-- You will also need to set up your gateway as a DNS resolver. To do so on UNIX, do the following:
-  - Add at least a *search* and *nameserver* to /etc/resolv.conf. I am using the following: `search nyc.rr.com
-  nameserver 192.168.0.1`
-  - `$ cp /etc/nsswitch.{dns,conf}`
-- Add the OmniTI managed services package repo to make getting a few things easier.
-  - `$ pkg set-publisher -g http://pkg.omniti.com/omniti-ms/ ms.omniti.com`
-- Rebuild the package index
-  - `$ pkg rebuild-index`
-- Install Ruby and gcc 4.6 to be able to build gem extensions. Also ensure libffi is there since Vagrant needs the ffi gem.
-  - `$ pkg install omniti/runtime/ruby-19`
-  - `$ pkg install developer/gcc46`
-  - `$ pkg install library/libffi`
-- At this point you should be ready to install the Vagrant gem. The Ruby 1.9 executables like `gem` and `irb` get put into `/opt/omni/bin/`.
-  - `$ /opt/omni/bin/gem install vagrant`
-- Run a quick `vagrant status` to ensure that everything's hooked up properly.
-  - `$ /opt/omni/lib/ruby/gems/1.9.1/gems/vagrant-1.0.5/bin/vagrant status`
-- Next up we need to install VirtualBox. I saw [errors related to the Crossbow-based networking kernel module](https://gist.github.com/7ddfa72c1d97198532ea) while trying to install a variety of versions of VirtualBox, so we can [force the older stream-based VirtualBox drive to install](http://www.virtualbox.org/manual/ch09.html#vboxbowsolaris11).
-  - `$ touch /etc/vboxinst_vboxflt`
-- With that in place, download and extract the VirtualBox 4.2.0 release for Solaris guests.
-  - `$ wget http://download.virtualbox.org/virtualbox/4.2.0/VirtualBox-4.2.0-80737-SunOS.tar.gz`
-  - `$ tar xzf VirtualBox-4.2.0-80737-SunOS.tar.gz`
-- Next up, install the package.
-  - `$ pkgadd -d VirtualBox-4.2.0-SunOS-r80737.pkg`
-- At this point you should be ready to download a Vagrantfile and go. I've made [a sample one](https://gist.github.com/0509301bb7c62e523b49) that you can try with.
-  - `$ curl https://raw.github.com/gist/0509301bb7c62e523b49/87e75688b45631ca9492123c5f160d2311e84604/gistfile1.rb > Vagrantfile`
-  - `$ /opt/omni/lib/ruby/gems/1.9.1/gems/vagrant-1.0.5/bin/vagrant up`
-  - `$ /opt/omni/lib/ruby/gems/1.9.1/gems/vagrant-1.0.5/bin/vagrant ssh`
+Install a few utility packages. This is not strictly necessary, but it helps.
+
+    $ pkg install terminal/tmux
+    $ pkg install developer/versioning/git
+
+Set up a static IP as pointed out in http://omnios.omniti.com/wiki.php/GeneralAdministration. In my case, it was 192.168.0.160.
+
+You will also need to set up your gateway as a DNS resolver. To do so on UNIX, add at least a *search* and *nameserver* to /etc/resolv.conf. I am using the following:
+
+    search nyc.rr.com
+    nameserver 192.168.0.1
+
+Set up NSS to read resolv.conf.
+
+    $ cp /etc/nsswitch.{dns,conf}
+
+Add the OmniTI managed services package repo to make getting a few things easier.
+
+    $ pkg set-publisher -g http://pkg.omniti.com/omniti-ms/ ms.omniti.com
+
+Rebuild the package index
+
+    $ pkg rebuild-index
+
+Install Ruby and gcc 4.6 to be able to build gem extensions. Also ensure libffi is there since Vagrant needs the ffi gem.
+
+    $ pkg install omniti/runtime/ruby-19
+    $ pkg install developer/gcc46
+    $ pkg install library/libffi
+
+At this point you should be ready to install the Vagrant gem. The Ruby 1.9 executables like `gem` and `irb` get put into `/opt/omni/bin/`.
+
+    $ /opt/omni/bin/gem install vagrant
+
+Run a quick `vagrant help` to ensure that everything's hooked up properly.
+
+    $ /opt/omni/lib/ruby/gems/1.9.1/gems/vagrant-1.0.5/bin/vagrant help
+
+Next up we need to install VirtualBox. I saw [errors related to the Crossbow-based networking kernel module](https://gist.github.com/7ddfa72c1d97198532ea) while trying to install a variety of versions of VirtualBox, so we can [force the older stream-based VirtualBox drive to install](http://www.virtualbox.org/manual/ch09.html#vboxbowsolaris11).
+
+    $ touch /etc/vboxinst_vboxflt
+
+With that in place, download and extract the VirtualBox 4.2.0 release for Solaris guests.
+
+    $ wget http://download.virtualbox.org/virtualbox/4.2.0/VirtualBox-4.2.0-80737-SunOS.tar.gz
+    $ tar xzf VirtualBox-4.2.0-80737-SunOS.tar.gz
+
+Next up, install the package.
+
+    $ pkgadd -d VirtualBox-4.2.0-SunOS-r80737.pkg
+
+At this point you should be ready to download a Vagrantfile and go. I've made [a sample one](https://gist.github.com/0509301bb7c62e523b49) that you can try with.
+
+    $ curl https://raw.github.com/gist/0509301bb7c62e523b49/87e75688b45631ca9492123c5f160d2311e84604/gistfile1.rb > Vagrantfile
+    $ /opt/omni/lib/ruby/gems/1.9.1/gems/vagrant-1.0.5/bin/vagrant up
+    $ /opt/omni/lib/ruby/gems/1.9.1/gems/vagrant-1.0.5/bin/vagrant ssh
 
 And with that, the box should download and the second command should have you logged in as the `vagrant` user on your very own Ubuntu 12.04 LTS VM.
 
@@ -66,7 +91,9 @@ And with that, the box should download and the second command should have you lo
 
 There is one peculiarity to VirtualBox on OmniOS (which, granted, might be VirtualBox on Solaris/Illumos - I have no idea.) Windows, Mac, and Linux hosts all have the ability to create a host-only interface with the `VBoxManage hostonlyif create` command-line option. That option does not exist in the Solaris version of VirtualBox. In my experience from this weekend, VirtualBox will create you a `vboxnet0` interface which can be used as a host-only network. If you do wish to use host-only networking with your VM, you will have to set it up before you run `vagrant up`.
 
-I usually run my host-only interfaces inside of 172.16.0.0/12. For the sake of argument, let's say we want to give this VM a host-only address of 172.31.31.31. (The sample Vagrantfile has this configuration commented out.) By setting the IP address of `vboxnet0` to 172.31.31.1, vagrant will not try to run `VBoxManage hostonlyif create`, and host-only networking will also work.
+I usually run my host-only interfaces inside of 172.16.0.0/12. For the sake of argument, let's say we want to give this VM a host-only address of 172.31.31.31. (The sample Vagrantfile has this configuration commented out.) By setting the IP address of `vboxnet0` to 172.31.31.1, vagrant will not try to run `VBoxManage hostonlyif create`, and host-only networking will also work. The `VBoxManage` command to do so is as follows:
+
+    $ VBoxManage hostonlyif ipconfig vboxnet0 -ip 172.31.31.1
 
 ### Not exhaustive
 
