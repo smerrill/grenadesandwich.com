@@ -12,15 +12,15 @@ categories:
 
 ### <3 ZFS
 
-I've recently gotten religion about ZFS, and as a result, I've been looking hard at the various systems that offer you the ability to use ZFS and other amazing tools from the Solaris lineage (now being developed freely under the Illumos moniker after Oracle's unceremonious murder of OpenSolaris.)
+I've recently gotten religion about ZFS, and as a result, I've been looking hard at the various systems that offer you the ability to use ZFS and other amazing tools from the Solaris lineage (now being developed freely under [the Illumos moniker](http://blog.illumos.org/) after Oracle's unceremonious murder of OpenSolaris.)
 
-My data's backed up on an 8 TB FreeNAS, but there's also an amazing trend of Illumos-based distributions on offer that offer KVM virtualization, which was ported to Illumos by Joyent for their SmartOS distribution. Theo Schlossnagle recently gave a talk at the NYC DevOps meetup about their Illumos-based OmniOS distribution. OmniOS is a bit more than a JeOS - it aims to provide just enough packaged software to let you build the Illumos kernel and several other important tools like tmux and screen, and then get out of your way. Like SmartOS, it provides both lightweight zones-based virtualization and KVM for full hardware virtualization, but OmniOS is designed to be permanently installed on a machine, as opposed to SmartOS's focus on USB or PXE booting and ephemeral global zone configuration.
+My data's backed up on an 8 TB FreeNAS, but there's also an amazing trend of Illumos-based distributions on offer that offer KVM virtualization, which was ported to Illumos by Joyent for [their SmartOS distribution](http://smartos.org/). Theo Schlossnagle recently gave a talk at the NYC DevOps meetup about [their Illumos-based OmniOS distribution](http://omnios.omniti.com/). OmniOS is a bit more than a JeOS - it aims to provide just enough packaged software to let you build the Illumos kernel and several other important tools like tmux and screen, and then get out of your way. Like SmartOS, it provides both lightweight zones-based virtualization and KVM for full hardware virtualization, but OmniOS is designed to be permanently installed on a machine, as opposed to SmartOS's focus on USB or PXE booting and ephemeral global zone configuration.
 
-OmniTI also makes a larger set of packages that their Managed Services team uses at http://pkg.omniti.com/omniti-ms/en/index.shtml.
+OmniTI also makes a larger set of packages that their Managed Services team uses at [http://pkg.omniti.com/omniti-ms/en/index.shtml](http://pkg.omniti.com/omniti-ms/en/index.shtml).
 
 ### KVM? Not today.
 
-But at the end of the day, Vagrant is still the platform I use to run applications with the correct operating system, software versions, and production configurations, so I need Vagrant (and thus VirtualBox) to run on my workstation.
+But at the end of the day, [Vagrant](http://vagrantup.com/) is still the platform I use to run applications with the correct operating system, software versions, and production configurations, so I need Vagrant (and thus [VirtualBox](https://www.virtualbox.org/)) to run on my workstation.
 
 I am happy to report that I was able to get VirtualBox and Vagrant to the point that they could boot a box, and use host-only networking despite being a complete UNIX and Solaris noob. (Thanks to Mitchell and the whole Vagrant community for an awesome piece of software.)
 
@@ -48,7 +48,7 @@ Here's the roundup on how to get it all up and running. All commands were run as
   - `$ /opt/omni/bin/gem install vagrant`
 - Run a quick `vagrant status` to ensure that everything's hooked up properly.
   - `$ /opt/omni/lib/ruby/gems/1.9.1/gems/vagrant-1.0.5/bin/vagrant status`
-- Next up we need to install VirtualBox. I [saw errors related to the Crossbow-based networking kernel module](https://gist.github.com/7ddfa72c1d97198532ea) while trying to install a variety of versions of VirtualBox, so we can [force the older stream-based VirtualBox drive to install](http://www.virtualbox.org/manual/ch09.html#vboxbowsolaris11).
+- Next up we need to install VirtualBox. I saw [errors related to the Crossbow-based networking kernel module](https://gist.github.com/7ddfa72c1d97198532ea) while trying to install a variety of versions of VirtualBox, so we can [force the older stream-based VirtualBox drive to install](http://www.virtualbox.org/manual/ch09.html#vboxbowsolaris11).
   - `$ touch /etc/vboxinst_vboxflt`
 - With that in place, download and extract the VirtualBox 4.2.0 release for Solaris guests.
   - `$ wget http://download.virtualbox.org/virtualbox/4.2.0/VirtualBox-4.2.0-80737-SunOS.tar.gz`
