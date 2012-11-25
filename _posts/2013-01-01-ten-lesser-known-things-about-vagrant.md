@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Eight Lesser-Known Things About Vagrant"
+title: "Ten Lesser-Known Things About Vagrant"
 created: 1306726837
 categories:
 - vagrant
@@ -42,9 +42,17 @@ Here are 8 facts about Vagrant that are not widely known about Vagrant.
 
 ## 6. Vagrant's box management keeps pristine copies of boxes for you
 
-## 7. You can use the VirtualBox CLI to manage your machines
+## 7. Moving and cloning your Vagrant projects
 
-## 8. Vagrant runs pretty much everywhere
+* The `.vagrant` file and how it tracks VMs
+
+## 8. You can use the VirtualBox CLI to manage your machines
+
+* A quick `VBoxManage` primer
+* Hard stopping a VM
+* Stopping a VM after you delete a Vagrantfile
+
+## 9. Vagrant runs pretty much everywhere
 
 This shouldn't really come as a surprise to anyone, but every time I try out a new platform, Vagrant works flawlessly. This is a tribute to VirtualBox: although it has its warts, it runs pretty much everywhere. Mitchell also has to work around various VirtualBox bugs on [certain versions of OS X](https://github.com/mitchellh/vagrant/commit/e367a8cfd6ecd3b194ab694eea948dfd891b76b9) [and on Windows](https://github.com/mitchellh/vagrant/commit/6323a8efd433e6e340a262e89fa3aba86f2e9d4f), so the fact that this all just works transparently is pretty awesome.
 
@@ -62,7 +70,7 @@ Any time I set up a new system, one of the first things I do is set up VirtualBo
 * Windows 7
 * * Before I reformatted a netbook to Linux, I tried out Vagrant 1.0.5 with Cygwin, and everything worked smoothly.
 
-## 8. Vagrant is not (yet) ready to use non-VirtualBox hypervisors yet
+## 10. Vagrant is not (yet) ready to use non-VirtualBox hypervisors yet
 
 I'm including this as a quick way to end this post. Several people have popped into #vagrant and said, "I read that Vagrant supports VMWare, or that it will soon!"
 
